@@ -1,0 +1,250 @@
+$primary-color: #339966;
+$secondary-color: #e6b800;
+
+$first-card-main: #ffcccc;
+$first-card-second: #331a00;
+
+$second-card-main: #ffe6ff;
+$second-card-second: #e68a00;
+
+$third-card-main: rgba(242, 242, 242 , 0.5);
+$third-card-second: #00e6b8;
+
+$fourth-card-main: #2db300;
+
+@mixin exlam-appear ($delay) {
+    opacity: 1;
+    transition: opacity ease-in 0.3s $delay;
+}
+
+@mixin exlam-dispear ($delay) {
+    opacity: 0;
+    transition: opacity ease-in 0.3s $delay;
+}
+
+.container
+    {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 25px;
+    }
+    
+.menu
+{
+    width: 20%;
+    height: 250px;
+    margin: 0px 15px;
+    display: flex;
+    font-size: 20px;
+    opacity: 1;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 0px 0px 18px -10px rgba(0,0,0,0.75);
+    transition: all ease-in 0.5s;
+    &:hover 
+    {
+        font-size: 25px;
+        opacity: 0.7;
+    }
+
+    div
+    {
+        margin: auto;
+        text-align: center;
+
+        h2
+        {
+            margin: 5px 0;
+        }
+    }
+}
+
+@media screen and (max-width: 860px)
+{
+    .container
+    {
+        flex-direction: column;
+    }
+
+    .menu 
+    {
+        width: 40%;
+        margin: 15px auto;
+    }
+}
+
+@media screen and (min-width: 150px) and (max-width: 500px)
+{
+    .container
+    {
+        flex-direction: column;
+    }
+
+    .menu 
+    {
+        width: 100%;
+        margin: 15px auto;
+    }
+
+    .modifie-heading__h3
+    {
+
+        h3 
+        {
+            width: 200px !important;
+            margin-bottom: 50px;
+        }
+    }
+}
+
+
+
+/*Item1*/
+
+.menu__item1
+{
+    background: $first-card-main;
+    color: $first-card-second;
+
+    div
+    {
+        p 
+        {
+            font-weight: bold;
+            font-family: 'Satisfy', cursive ; 
+        }
+
+        h2 
+        {
+            font-family: 'Kalam', cursive;
+        }
+    }
+}
+
+/*Item2*/
+
+.menu__item2
+{
+    background: $second-card-main;
+
+    div h2 
+    {
+        h2 
+        {
+            color: $second-card-second;
+        }
+    }
+}
+
+/*Item3*/
+
+.menu__item3
+{
+    background: $third-card-main;
+
+    div
+    {
+        h2 
+        {
+            color: $third-card-second;
+            font-family: 'Kalam', cursive;
+        }
+    }
+}
+
+/*Item4*/
+
+.menu__item4
+{
+    div
+    {
+        h2
+        {
+            color: $fourth-card-main;
+            font-family: 'Kalam', cursive;
+        }
+    }
+}
+
+/*Footer*/
+
+.modifie-heading__h3
+{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+    h3
+    {
+        text-align: center;
+        font-size: 25px;
+        width: 300px;
+        height: 35px;
+        background: $primary-color;
+        color: $secondary-color;
+        border-radius: 10px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: normal;
+        text-align: center;
+    }
+
+    &:hover
+        {
+            strong i
+            {
+                &:nth-child(1)
+                {
+                    @include exlam-appear(0.5s) ;
+                }
+
+                &:nth-child(2)
+                {
+                    @include exlam-appear(1s) ;
+                }
+
+                &:nth-child(3)
+                {
+                    @include exlam-appear(1.5s) ;
+                }
+            }
+        }
+
+        &:not(:hover)
+        {
+            strong i
+            {
+                &:nth-child(1)
+                {
+                    @include exlam-dispear(1.5s) ;
+                }
+
+                &:nth-child(2)
+                {
+                    @include exlam-dispear(1s) ;
+                }
+
+                &:nth-child(3)
+                {
+                    @include exlam-dispear(0.5s) ;
+                }
+            }
+        }
+
+    strong
+    { 
+        margin-left: 10px;
+        i 
+        {
+            margin: 30px 5px;
+            color: $secondary-color;
+            font-size: x-large;
+            opacity: 0;
+        }
+    }
+
+}
+
+
+

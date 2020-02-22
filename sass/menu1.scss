@@ -1,0 +1,51 @@
+/*General*/
+$color-primary: #ffcccc ; 
+$color-secondary: #331a00 ;
+
+.card
+{
+    background: $color-primary;
+    color: $color-secondary;
+
+    h2
+    {
+        font-size: 30px;
+        font-family: 'Satisfy', cursive;
+
+        &:first-child
+        {
+            display: flex;
+            flex-direction: column;
+            i 
+            {
+                font-size: 50px;
+            }
+        }
+
+        i 
+        {
+            margin-right: 10px;
+        }
+    }
+
+    .item
+    {
+        font-family: 'Kalam', cursive;
+
+        h2 
+        {
+            .line
+            {
+                background-color: $color-primary;
+                border: none;
+            }
+            p 
+            {
+                &::before
+                {
+                    background-color: $color-secondary;
+                }
+            }
+        }
+    }
+}

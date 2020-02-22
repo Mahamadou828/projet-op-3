@@ -1,0 +1,26 @@
+$primary-color: #00ff00 ;
+
+.card
+{
+    font-family: 'Kalam', cursive;
+
+    .item 
+    {
+        font-family: 'Kalam', cursive;
+        h2 
+        {
+            .line
+        {
+            width: 30%;
+            background-color: $primary-color;
+        }
+            p 
+        {
+            &::before
+            {
+                background-color: $primary-color;
+            }
+        }
+        }
+    }
+}

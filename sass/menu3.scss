@@ -1,0 +1,45 @@
+@mixin line-decoration ($color){
+        .line
+        {
+            background-color: $color;
+        }
+        p 
+        {
+            &::before
+            {
+                background-color: $color;
+            }
+        }
+}
+
+$primary-color: rgba(242, 242, 242 , 0.5);
+
+$first-color:#0000ff ;
+$second-color:#0066ff ;
+$third-color:#3399ff ;
+
+.card
+{
+    font-family: 'Dancing Script', cursive;
+    background: $primary-color;
+
+    .item
+    {
+        font-family: 'Kalam', cursive;
+        h2 
+        {
+            &:nth-child(1)
+            {
+                @include line-decoration($first-color) ;
+            }
+            &:nth-child(2)
+            {
+                @include line-decoration($second-color) ;
+            }
+            &:nth-child(3)
+            {
+                @include line-decoration($third-color) ;
+            }
+        }
+    }
+}

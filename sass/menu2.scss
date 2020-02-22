@@ -1,0 +1,44 @@
+@mixin line-decoration ($color){
+    h2 
+    {
+        .line
+        {
+            background-color: $color;
+        }
+        p 
+        {
+            &::before
+            {
+                background-color: $color;
+            }
+        }
+    }
+}
+
+$first-color:#cc9900 ;
+$second-color:#993366 ;
+$third-color:#002db3 ;
+
+.item
+{
+    &__entree
+    {
+        color: $first-color ;
+
+        @include line-decoration($first-color) ;
+    }
+
+    &__milieu
+    {
+        color: $second-color;
+        @include line-decoration($second-color) ;
+    }
+
+    &__desert
+    {
+        color: $third-color;
+        @include line-decoration($third-color) ;
+    }
+
+    
+}

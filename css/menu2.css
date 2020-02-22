@@ -1,0 +1,29 @@
+.item__entree {
+  color: #cc9900;
+}
+.item__entree h2 .line {
+  background-color: #cc9900;
+}
+.item__entree h2 p::before {
+  background-color: #cc9900;
+}
+.item__milieu {
+  color: #993366;
+}
+.item__milieu h2 .line {
+  background-color: #993366;
+}
+.item__milieu h2 p::before {
+  background-color: #993366;
+}
+.item__desert {
+  color: #002db3;
+}
+.item__desert h2 .line {
+  background-color: #002db3;
+}
+.item__desert h2 p::before {
+  background-color: #002db3;
+}
+
+/*# sourceMappingURL=menu2.css.map */

@@ -1,0 +1,31 @@
+/*General*/
+.card {
+  background: #ffcccc;
+  color: #331a00;
+}
+.card h2 {
+  font-size: 30px;
+  font-family: "Satisfy", cursive;
+}
+.card h2:first-child {
+  display: flex;
+  flex-direction: column;
+}
+.card h2:first-child i {
+  font-size: 50px;
+}
+.card h2 i {
+  margin-right: 10px;
+}
+.card .item {
+  font-family: "Kalam", cursive;
+}
+.card .item h2 .line {
+  background-color: #ffcccc;
+  border: none;
+}
+.card .item h2 p::before {
+  background-color: #331a00;
+}
+
+/*# sourceMappingURL=menu1.css.map */
