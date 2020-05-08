@@ -1,0 +1,10 @@
+#menu4
+{
+    font-family: $secondary-font;
+
+    .item 
+    {
+        font-family: $secondary-font;
+        @include line-decoration($fourth-menu-color-secondary) ;     
+    }
+}

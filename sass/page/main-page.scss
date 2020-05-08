@@ -1,40 +1,25 @@
-$primary-color: #339966;
-$secondary-color: #e6b800;
-
-$first-card-main: #ffcccc;
-$first-card-second: #331a00;
-
-$second-card-main: #ffe6ff;
-$second-card-second: #e68a00;
-
-$third-card-main: rgba(242, 242, 242 , 0.5);
-$third-card-second: #00e6b8;
-
-$fourth-card-main: #2db300;
-
-@mixin exlam-appear ($delay) {
-    opacity: 1;
-    transition: opacity ease-in 0.3s $delay;
-}
-
-@mixin exlam-dispear ($delay) {
-    opacity: 0;
-    transition: opacity ease-in 0.3s $delay;
-}
-
 .container
-    {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        margin-top: 25px;
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 25px;
+
+    @include mobile-only {
+        flex-direction: column;
     }
+
+    @include tablette {
+        flex-direction: column;
+    }
+}
     
 .menu
 {
-    width: 20%;
-    height: 250px;
+    width: $card-width;
+    height: $card-height;
     margin: 0px 15px;
     display: flex;
     font-size: 20px;
@@ -42,8 +27,19 @@ $fourth-card-main: #2db300;
     flex-direction: column;
     align-items: center;
     text-decoration: none;
-    box-shadow: 0px 0px 18px -10px rgba(0,0,0,0.75);
-    transition: all ease-in 0.5s;
+    box-shadow: $box-shadow;
+    transition: all ease-in-out 0.5s;
+
+    @include mobile-only {
+        width: 100% !important;
+        margin: 15px auto !important;
+    }
+
+    @include tablette {
+        width: 40%;
+        margin: 15px auto;
+    }
+
     &:hover 
     {
         font-size: 25px;
@@ -62,64 +58,26 @@ $fourth-card-main: #2db300;
     }
 }
 
-@media screen and (max-width: 860px)
-{
-    .container
-    {
-        flex-direction: column;
-    }
-
-    .menu 
-    {
-        width: 40%;
-        margin: 15px auto;
-    }
-}
-
-@media screen and (min-width: 150px) and (max-width: 500px)
-{
-    .container
-    {
-        flex-direction: column;
-    }
-
-    .menu 
-    {
-        width: 100%;
-        margin: 15px auto;
-    }
-
-    .modifie-heading__h3
-    {
-
-        h3 
-        {
-            width: 200px !important;
-            margin-bottom: 50px;
-        }
-    }
-}
-
 
 
 /*Item1*/
 
 .menu__item1
 {
-    background: $first-card-main;
-    color: $first-card-second;
+    background: $first-item-color-primary;
+    color: $first-item-color-secondary;
 
     div
     {
         p 
         {
             font-weight: bold;
-            font-family: 'Satisfy', cursive ; 
+            font-family: $third-font ; 
         }
 
         h2 
         {
-            font-family: 'Kalam', cursive;
+            font-family: $secondary-font;
         }
     }
 }
@@ -128,13 +86,13 @@ $fourth-card-main: #2db300;
 
 .menu__item2
 {
-    background: $second-card-main;
+    background: $second-item-color-primary;
 
     div h2 
     {
         h2 
         {
-            color: $second-card-second;
+            color: $second-item-color-secondary;
         }
     }
 }
@@ -143,14 +101,14 @@ $fourth-card-main: #2db300;
 
 .menu__item3
 {
-    background: $third-card-main;
+    background: $third-item-color-primary;
 
     div
     {
         h2 
         {
-            color: $third-card-second;
-            font-family: 'Kalam', cursive;
+            color: $third-item-color-secondary;
+            font-family: $secondary-font;
         }
     }
 }
@@ -161,11 +119,26 @@ $fourth-card-main: #2db300;
 {
     div
     {
+        
         h2
         {
-            color: $fourth-card-main;
-            font-family: 'Kalam', cursive;
+            color: $fourth-item-color-primary;
+            font-family: $secondary-font;
         }
+    }
+}
+
+/*gradient*/
+.gradient
+{
+    &_2 {
+        @include gradient ($second-item-color-secondary, $second-menu-color-secondary) ; 
+    }
+    &_3 {
+        @include gradient ($third-menu-color-primary, $third-menu-color-third) ; 
+    }
+    &_4 {
+        @include gradient ($fourth-item-color-primary, $white) ; 
     }
 }
 
@@ -185,9 +158,14 @@ $fourth-card-main: #2db300;
         background: $primary-color;
         color: $secondary-color;
         border-radius: 10px;
-        font-family: 'Open Sans', sans-serif;
+        font-family: $open-sans-font;
         font-weight: normal;
         text-align: center;
+
+        @include mobile-only {
+            width: 200px !important;
+            margin-bottom: 50px;
+        }
     }
 
     &:hover
@@ -245,6 +223,3 @@ $fourth-card-main: #2db300;
     }
 
 }
-
-
-

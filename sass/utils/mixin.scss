@@ -1,0 +1,47 @@
+@mixin gradient($color1 , $color2) {
+    background: linear-gradient(0.25turn,$color1, $color2);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@mixin exlam-appear ($delay) {
+    opacity: 1;
+    transition: opacity ease-in-out 0.3s $delay;
+}
+
+@mixin exlam-dispear ($delay) {
+    opacity: 0;
+    transition: opacity ease-in-out 0.3s $delay;
+}
+
+@mixin line-decoration ($color){
+    h2 
+    {
+        .line
+        {
+            background-color: $color;
+        }
+        p 
+        {
+            &::before
+            {
+                background-color: $color;
+            }
+        }
+    }
+}
+
+@mixin mobile-only {
+    @media screen and (min-width: 150px) and (max-width: 500px)
+    {
+        @content ; 
+    }
+}
+
+@mixin tablette {
+    @media screen and (max-width: 860px)
+    {
+        @content ; 
+    }
+}

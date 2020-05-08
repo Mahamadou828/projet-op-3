@@ -1,16 +1,12 @@
-/*General*/
-$color-primary: #ffcccc ; 
-$color-secondary: #331a00 ;
-
-.card
+#menu1
 {
-    background: $color-primary;
-    color: $color-secondary;
+    background: $first-item-color-primary;
+    color: $first-item-color-secondary;
 
     h2
     {
         font-size: 30px;
-        font-family: 'Satisfy', cursive;
+        font-family: $third-font;
 
         &:first-child
         {
@@ -30,20 +26,16 @@ $color-secondary: #331a00 ;
 
     .item
     {
-        font-family: 'Kalam', cursive;
-
+        font-family: $secondary-font;
+        
         h2 
         {
-            .line
-            {
-                background-color: $color-primary;
-                border: none;
-            }
+            text-align: center;
             p 
             {
                 &::before
                 {
-                    background-color: $color-secondary;
+                    background-color: $first-item-color-secondary;
                 }
             }
         }
