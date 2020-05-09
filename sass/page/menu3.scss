@@ -1,11 +1,8 @@
-#menu3
-{
-    font-family: $dancin-font;
-    background: $third-item-color-primary;
-
-    .item
-    {
-        font-family: $secondary-font ;
-        @include line-decoration($third-menu-color-primary) ;       
-    }
+#menu3 {
+	font-family: $dancin-font;
+	background: $third-item-color-primary;
+	.item {
+		font-family: $secondary-font;
+		@include line-decoration($third-menu-color-primary);
+	}
 }

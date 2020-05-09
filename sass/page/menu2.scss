@@ -1,21 +1,14 @@
-.item
-{
-    &__entree
-    {
-        color: $second-menu-color-primary ;
-
-        @include line-decoration($second-menu-color-primary) ;
-    }
-
-    &__milieu
-    {
-        color: $second-menu-color-secondary;
-        @include line-decoration($second-menu-color-secondary) ;
-    }
-
-    &__desert
-    {
-        color: $second-menu-color-third;
-        @include line-decoration($second-menu-color-third) ;
-    } 
+.item {
+	&__entree {
+		color: $second-menu-color-primary;
+		@include line-decoration($second-menu-color-primary);
+	}
+	&__milieu {
+		color: $second-menu-color-secondary;
+		@include line-decoration($second-menu-color-secondary);
+	}
+	&__desert {
+		color: $second-menu-color-third;
+		@include line-decoration($second-menu-color-third);
+	}
 }

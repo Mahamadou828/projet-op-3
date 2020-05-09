@@ -1,225 +1,176 @@
-.container
-{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-top: 25px;
-
-    @include mobile-only {
-        flex-direction: column;
-    }
-
-    @include tablette {
-        flex-direction: column;
-    }
-}
-    
-.menu
-{
-    width: $card-width;
-    height: $card-height;
-    margin: 0px 15px;
-    display: flex;
-    font-size: 20px;
-    opacity: 1;
-    flex-direction: column;
-    align-items: center;
-    text-decoration: none;
-    box-shadow: $box-shadow;
-    transition: all ease-in-out 0.5s;
-
-    @include mobile-only {
-        width: 100% !important;
-        margin: 15px auto !important;
-    }
-
-    @include tablette {
-        width: 40%;
-        margin: 15px auto;
-    }
-
-    &:hover 
-    {
-        font-size: 25px;
-        opacity: 0.7;
-    }
-
-    div
-    {
-        margin: auto;
-        text-align: center;
-
-        h2
-        {
-            margin: 5px 0;
-        }
-    }
+.container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin-top: 25px;
+	@include mobile-only {
+		flex-direction: column;
+	}
+	@include tablette {
+		flex-direction: column;
+	}
 }
 
+.menu {
+	width: $card-width;
+	height: $card-height;
+	margin: 0px 15px;
+	display: flex;
+	font-size: 20px;
+	opacity: 1;
+	flex-direction: column;
+	align-items: center;
+	text-decoration: none;
+	box-shadow: $box-shadow;
+	transition: all ease-in-out 0.5s;
+	@include mobile-only {
+		width: 100% !important;
+		margin: 15px auto !important;
+	}
+	@include tablette {
+		width: 40%;
+		margin: 15px auto;
+	}
+	&:hover {
+		font-size: 25px;
+		opacity: 0.7;
+	}
+	div {
+		margin: auto;
+		text-align: center;
+		h2 {
+			margin: 5px 0;
+		}
+	}
+}
 
 
 /*Item1*/
 
-.menu__item1
-{
-    background: $first-item-color-primary;
-    color: $first-item-color-secondary;
-
-    div
-    {
-        p 
-        {
-            font-weight: bold;
-            font-family: $third-font ; 
-        }
-
-        h2 
-        {
-            font-family: $secondary-font;
-        }
-    }
+.menu__item1 {
+	background: $first-item-color-primary;
+	color: $first-item-color-secondary;
+	div {
+		p {
+			font-weight: bold;
+			font-family: $third-font;
+		}
+		h2 {
+			font-family: $secondary-font;
+		}
+	}
 }
+
 
 /*Item2*/
 
-.menu__item2
-{
-    background: $second-item-color-primary;
-
-    div h2 
-    {
-        h2 
-        {
-            color: $second-item-color-secondary;
-        }
-    }
+.menu__item2 {
+	background: $second-item-color-primary;
+	div h2 {
+		h2 {
+			color: $second-item-color-secondary;
+		}
+	}
 }
+
 
 /*Item3*/
 
-.menu__item3
-{
-    background: $third-item-color-primary;
-
-    div
-    {
-        h2 
-        {
-            color: $third-item-color-secondary;
-            font-family: $secondary-font;
-        }
-    }
+.menu__item3 {
+	background: $third-item-color-primary;
+	div {
+		h2 {
+			color: $third-item-color-secondary;
+			font-family: $secondary-font;
+		}
+	}
 }
+
 
 /*Item4*/
 
-.menu__item4
-{
-    div
-    {
-        
-        h2
-        {
-            color: $fourth-item-color-primary;
-            font-family: $secondary-font;
-        }
-    }
+.menu__item4 {
+	div {
+		h2 {
+			color: $fourth-item-color-primary;
+			font-family: $secondary-font;
+		}
+	}
 }
 
+
 /*gradient*/
-.gradient
-{
-    &_2 {
-        @include gradient ($second-item-color-secondary, $second-menu-color-secondary) ; 
-    }
-    &_3 {
-        @include gradient ($third-menu-color-primary, $third-menu-color-third) ; 
-    }
-    &_4 {
-        @include gradient ($fourth-item-color-primary, $white) ; 
-    }
+
+.gradient {
+	&_2 {
+		@include gradient ($second-item-color-secondary, $second-menu-color-secondary);
+	}
+	&_3 {
+		@include gradient ($third-menu-color-primary, $third-menu-color-third);
+	}
+	&_4 {
+		@include gradient ($fourth-item-color-primary, $white);
+	}
 }
+
 
 /*Footer*/
 
-.modifie-heading__h3
-{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 25px;
-    h3
-    {
-        text-align: center;
-        font-size: 25px;
-        width: 300px;
-        height: 35px;
-        background: $primary-color;
-        color: $secondary-color;
-        border-radius: 10px;
-        font-family: $open-sans-font;
-        font-weight: normal;
-        text-align: center;
-
-        @include mobile-only {
-            width: 200px !important;
-            margin-bottom: 50px;
-        }
-    }
-
-    &:hover
-        {
-            strong i
-            {
-                &:nth-child(1)
-                {
-                    @include exlam-appear(0.5s) ;
-                }
-
-                &:nth-child(2)
-                {
-                    @include exlam-appear(1s) ;
-                }
-
-                &:nth-child(3)
-                {
-                    @include exlam-appear(1.5s) ;
-                }
-            }
-        }
-
-        &:not(:hover)
-        {
-            strong i
-            {
-                &:nth-child(1)
-                {
-                    @include exlam-dispear(1.5s) ;
-                }
-
-                &:nth-child(2)
-                {
-                    @include exlam-dispear(1s) ;
-                }
-
-                &:nth-child(3)
-                {
-                    @include exlam-dispear(0.5s) ;
-                }
-            }
-        }
-
-    strong
-    { 
-        margin-left: 10px;
-        i 
-        {
-            margin: 30px 5px;
-            color: $secondary-color;
-            font-size: x-large;
-            opacity: 0;
-        }
-    }
-
+.modifie-heading__h3 {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 25px;
+	h3 {
+		text-align: center;
+		font-size: 25px;
+		width: 300px;
+		height: 35px;
+		background: $primary-color;
+		color: $secondary-color;
+		border-radius: 10px;
+		font-family: $open-sans-font;
+		font-weight: normal;
+		text-align: center;
+		@include mobile-only {
+			width: 200px !important;
+			margin-bottom: 50px;
+		}
+	}
+	&:hover {
+		strong i {
+			&:nth-child(1) {
+				@include exlam-appear(0.5s);
+			}
+			&:nth-child(2) {
+				@include exlam-appear(1s);
+			}
+			&:nth-child(3) {
+				@include exlam-appear(1.5s);
+			}
+		}
+	}
+	&:not(:hover) {
+		strong i {
+			&:nth-child(1) {
+				@include exlam-dispear(1.5s);
+			}
+			&:nth-child(2) {
+				@include exlam-dispear(1s);
+			}
+			&:nth-child(3) {
+				@include exlam-dispear(0.5s);
+			}
+		}
+	}
+	strong {
+		margin-left: 10px;
+		i {
+			margin: 30px 5px;
+			color: $secondary-color;
+			font-size: x-large;
+			opacity: 0;
+		}
+	}
 }
