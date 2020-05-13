@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Kalam&family=Martel+Sans&family=Open+Sans&family=Satisfy&display=swap");
+/**/
 @keyframes thing {
   0% {
     transform: rotate(-5deg);
@@ -13,6 +14,7 @@
     transform: rotate(0deg);
   }
 }
+/**/
 footer {
   font-family: "Open Sans", sans-serif;
   display: flex;
@@ -61,23 +63,23 @@ h1 {
   flex-direction: row;
   justify-content: space-between;
 }
-.item h2 {
+.item header {
   position: relative;
   margin: 24px auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.item h2 .line {
+.item header .line {
   width: 25%;
   height: 3px;
   border-radius: 10px;
 }
-.item h2 p {
+.item header h2 {
   display: inline;
   position: relative;
 }
-.item h2 p::before {
+.item header h2::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -89,14 +91,14 @@ h1 {
   transition: 0.25s ease-in-out;
   transform-origin: 0 0;
 }
-.item h2 p:hover::before {
+.item header h2:hover::before {
   transform: scaleX(1);
 }
 
 .card {
   text-align: center;
   width: 75%;
-  margin: 0 auto;
+  margin: 0 auto 50px auto;
   padding: 10px 50px;
   box-shadow: 0px 0px 18px -10px rgba(0, 0, 0, 0.75);
 }
@@ -112,6 +114,7 @@ h1 {
   margin-top: 0px;
 }
 
+/**/
 .container {
   width: 100%;
   display: flex;
@@ -218,7 +221,7 @@ h1 {
   -webkit-text-fill-color: transparent;
 }
 .gradient_4 {
-  background: linear-gradient(0.25turn, #2db300, #fff);
+  background: linear-gradient(0.25turn, #2db300, #99ff66);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -274,11 +277,12 @@ h1 {
 }
 .modifie-heading__h3 strong {
   margin-left: 10px;
+  padding-top: 15px;
 }
 .modifie-heading__h3 strong i {
   margin: 30px 5px;
   color: #e6b800;
-  font-size: x-large;
+  font-size: 30px;
   opacity: 0;
 }
 
@@ -288,6 +292,7 @@ h1 {
 }
 #menu1 h2 {
   font-size: 30px;
+  margin: 0 auto;
   font-family: "Satisfy", cursive;
 }
 #menu1 h2:first-child {
@@ -303,38 +308,44 @@ h1 {
 #menu1 .item {
   font-family: "Kalam", cursive;
 }
-#menu1 .item h2 {
+#menu1 .item header {
   text-align: center;
 }
-#menu1 .item h2 p::before {
+#menu1 .item header h2::before {
   background-color: #331a00;
+}
+
+.bottom-logo {
+  font-size: 30px;
+  margin: 0 auto;
+  font-family: "Satisfy", cursive;
 }
 
 .item__entree {
   color: #cc9900;
 }
-.item__entree h2 .line {
+.item__entree header .line {
   background-color: #cc9900;
 }
-.item__entree h2 p::before {
+.item__entree header h2::before {
   background-color: #cc9900;
 }
 .item__milieu {
   color: #993366;
 }
-.item__milieu h2 .line {
+.item__milieu header .line {
   background-color: #993366;
 }
-.item__milieu h2 p::before {
+.item__milieu header h2::before {
   background-color: #993366;
 }
 .item__desert {
   color: #002db3;
 }
-.item__desert h2 .line {
+.item__desert header .line {
   background-color: #002db3;
 }
-.item__desert h2 p::before {
+.item__desert header h2::before {
   background-color: #002db3;
 }
 
@@ -345,10 +356,10 @@ h1 {
 #menu3 .item {
   font-family: "Kalam", cursive;
 }
-#menu3 .item h2 .line {
+#menu3 .item header .line {
   background-color: #0000ff;
 }
-#menu3 .item h2 p::before {
+#menu3 .item header h2::before {
   background-color: #0000ff;
 }
 
@@ -358,11 +369,11 @@ h1 {
 #menu4 .item {
   font-family: "Kalam", cursive;
 }
-#menu4 .item h2 .line {
-  background-color: #00ff00;
+#menu4 .item header .line {
+  background-color: #99ff66;
 }
-#menu4 .item h2 p::before {
-  background-color: #00ff00;
+#menu4 .item header h2::before {
+  background-color: #99ff66;
 }
 
 /*# sourceMappingURL=index.css.map */

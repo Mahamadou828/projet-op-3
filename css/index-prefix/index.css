@@ -221,19 +221,16 @@ h1 {
 /*gradient*/
 .gradient_2 {
   background: linear-gradient(0.25turn, #e68a00, #993366);
-  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .gradient_3 {
   background: linear-gradient(0.25turn, #0000ff, #3399ff);
-  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .gradient_4 {
   background: linear-gradient(0.25turn, #2db300, #fff);
-  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

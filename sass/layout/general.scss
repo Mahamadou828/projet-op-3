@@ -25,7 +25,7 @@ h1 {
 		flex-direction: row;
 		justify-content: space-between;
 	}
-	h2 {
+	header {
 		position: relative;
 		margin: 24px auto;
 		display: flex;
@@ -34,9 +34,9 @@ h1 {
 		.line {
 			width: 25%;
 			height: 3px;
-			border-radius: 10px;
-		}
-		p {
+			border-radius: 10px; 
+		} 
+		h2 {
 			display: inline;
 			position: relative;
 			&::before {
@@ -61,7 +61,7 @@ h1 {
 .card {
 	text-align: center;
 	width: 75%;
-	margin: 0 auto;
+	margin: 0 auto 50px auto;
 	padding: 10px 50px;
 	box-shadow: $box-shadow;
 }

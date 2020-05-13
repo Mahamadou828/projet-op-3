@@ -1,11 +1,13 @@
 #menu1 {
 	background: $first-item-color-primary;
 	color: $first-item-color-secondary;
+
 	h2 {
 		font-size: 30px;
+		margin: 0 auto;
 		font-family: $third-font;
 		&:first-child {
-			display: flex;
+			display: flex; 
 			flex-direction: column;
 			i {
 				font-size: 50px;
@@ -17,13 +19,19 @@
 	}
 	.item {
 		font-family: $secondary-font;
-		h2 {
+		header {
 			text-align: center;
-			p {
+			h2 {
 				&::before {
 					background-color: $first-item-color-secondary;
 				}
 			}
 		}
 	}
+}
+
+.bottom-logo {
+	font-size: 30px;
+	margin: 0 auto;
+	font-family: $third-font;
 }
