@@ -114,13 +114,14 @@ h1 {
 @media screen and (min-width: 150px) and (max-width: 500px) {
   .card {
     width: 90%;
-    padding: 10px;
+    padding: 15px;
     font-size: 14px;
     text-align: start;
   }
   .card strong {
     margin: auto 0;
     font-size: 14px;
+    margin-left: 10px;
   }
 }
 
@@ -266,13 +267,13 @@ h1 {
   font-size: 30px;
 }
 .modifie-heading__h3 h3 strong i:nth-child(1) {
-  animation: dispear-appear 3s infinite 0.5s;
+  animation: dispear-appear 2s infinite 0.5s;
 }
 .modifie-heading__h3 h3 strong i:nth-child(2) {
-  animation: dispear-appear 3s infinite 1s;
+  animation: dispear-appear 2s infinite 1s;
 }
 .modifie-heading__h3 h3 strong i:nth-child(3) {
-  animation: dispear-appear 3s infinite 1.5s;
+  animation: dispear-appear 2s infinite 1.5s;
 }
 
 #menu1 {
