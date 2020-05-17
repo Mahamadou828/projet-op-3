@@ -1,37 +1,43 @@
 #menu1 {
-	background: $first-item-color-primary;
-	color: $first-item-color-secondary;
+  background: $first-item-color-primary;
+  color: $first-item-color-secondary;
 
-	h2 {
-		font-size: 30px;
-		margin: 0 auto;
-		font-family: $third-font;
-		&:first-child {
-			display: flex; 
-			flex-direction: column;
-			i {
-				font-size: 50px;
-			}
-		}
-		i {
-			margin-right: 10px;
-		}
-	}
-	.item {
-		font-family: $secondary-font;
-		header {
-			text-align: center;
-			h2 {
-				&::before {
-					background-color: $first-item-color-secondary;
-				}
-			}
-		}
-	}
+  h2 {
+    font-size: 30px;
+    margin: 0 auto;
+    font-family: $third-font;
+    text-align: center;
+    &:first-child {
+      display: flex;
+      flex-direction: column;
+      i {
+        font-size: 50px;
+      }
+    }
+    i {
+      margin-right: 10px;
+    }
+  }
+  .item {
+    font-family: $secondary-font;
+    header {
+      text-align: center;
+      h2 {
+        &::before {
+          background-color: $first-item-color-secondary;
+        }
+      }
+
+      hr {
+        background-color: $first-item-color-secondary;
+        border: none;
+      }
+    }
+  }
 }
 
 .bottom-logo {
-	font-size: 30px;
-	margin: 0 auto;
-	font-family: $third-font;
+  font-size: 30px;
+  margin: 0 auto;
+  font-family: $third-font;
 }

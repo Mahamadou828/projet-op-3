@@ -14,6 +14,14 @@
     transform: rotate(0deg);
   }
 }
+@keyframes dispear-appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /**/
 footer {
   font-family: "Open Sans", sans-serif;
@@ -78,6 +86,7 @@ h1 {
 .item header h2 {
   display: inline;
   position: relative;
+  text-align: center;
 }
 .item header h2::before {
   content: "";
@@ -101,6 +110,18 @@ h1 {
   margin: 0 auto 50px auto;
   padding: 10px 50px;
   box-shadow: 0px 0px 18px -10px rgba(0, 0, 0, 0.75);
+}
+@media screen and (min-width: 150px) and (max-width: 500px) {
+  .card {
+    width: 90%;
+    padding: 10px;
+    font-size: 14px;
+    text-align: start;
+  }
+  .card strong {
+    margin: auto 0;
+    font-size: 14px;
+  }
 }
 
 .logo {
@@ -149,7 +170,7 @@ h1 {
 }
 @media screen and (min-width: 150px) and (max-width: 500px) {
   .menu {
-    width: 100% !important;
+    width: 85% !important;
     margin: 15px auto !important;
   }
 }
@@ -210,80 +231,48 @@ h1 {
 /*gradient*/
 .gradient_2 {
   background: linear-gradient(0.25turn, #e68a00, #993366);
-  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .gradient_3 {
   background: linear-gradient(0.25turn, #0000ff, #3399ff);
-  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .gradient_4 {
   background: linear-gradient(0.25turn, #2db300, #99ff66);
-  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/*Footer*/
+/*Prochainement*/
 .modifie-heading__h3 {
   display: flex;
   justify-content: center;
-  margin-bottom: 25px;
+  margin-bottom: 50px;
 }
 .modifie-heading__h3 h3 {
   text-align: center;
   font-size: 25px;
-  width: 300px;
-  height: 35px;
   background: #339966;
   color: #e6b800;
   border-radius: 10px;
   font-family: "Open Sans", sans-serif;
   font-weight: normal;
   text-align: center;
+  padding: 10px;
 }
-@media screen and (min-width: 150px) and (max-width: 500px) {
-  .modifie-heading__h3 h3 {
-    width: 200px !important;
-    margin-bottom: 50px;
-  }
-}
-.modifie-heading__h3:hover strong i:nth-child(1) {
-  opacity: 1;
-  transition: opacity ease-in-out 0.3s 0.5s;
-}
-.modifie-heading__h3:hover strong i:nth-child(2) {
-  opacity: 1;
-  transition: opacity ease-in-out 0.3s 1s;
-}
-.modifie-heading__h3:hover strong i:nth-child(3) {
-  opacity: 1;
-  transition: opacity ease-in-out 0.3s 1.5s;
-}
-.modifie-heading__h3:not(:hover) strong i:nth-child(1) {
-  opacity: 0;
-  transition: opacity ease-in-out 0.3s 1.5s;
-}
-.modifie-heading__h3:not(:hover) strong i:nth-child(2) {
-  opacity: 0;
-  transition: opacity ease-in-out 0.3s 1s;
-}
-.modifie-heading__h3:not(:hover) strong i:nth-child(3) {
-  opacity: 0;
-  transition: opacity ease-in-out 0.3s 0.5s;
-}
-.modifie-heading__h3 strong {
-  margin-left: 10px;
-  padding-top: 15px;
-}
-.modifie-heading__h3 strong i {
-  margin: 30px 5px;
-  color: #e6b800;
+.modifie-heading__h3 h3 strong i {
   font-size: 30px;
-  opacity: 0;
+}
+.modifie-heading__h3 h3 strong i:nth-child(1) {
+  animation: dispear-appear 3s infinite 0.5s;
+}
+.modifie-heading__h3 h3 strong i:nth-child(2) {
+  animation: dispear-appear 3s infinite 1s;
+}
+.modifie-heading__h3 h3 strong i:nth-child(3) {
+  animation: dispear-appear 3s infinite 1.5s;
 }
 
 #menu1 {
@@ -294,6 +283,7 @@ h1 {
   font-size: 30px;
   margin: 0 auto;
   font-family: "Satisfy", cursive;
+  text-align: center;
 }
 #menu1 h2:first-child {
   display: flex;
@@ -313,6 +303,10 @@ h1 {
 }
 #menu1 .item header h2::before {
   background-color: #331a00;
+}
+#menu1 .item header hr {
+  background-color: #331a00;
+  border: none;
 }
 
 .bottom-logo {
